@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>현시법 4-5강 끝장내기 테스트</title>
+    <style>
+        body { font-family: 'Malgun Gothic', sans-serif; background-color: #f4f7f6; padding: 20px; line-height: 1.6; }
+        .quiz-container { max-width: 900px; margin: 0 auto; background: #fff; padding: 40px; border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.15); }
+        h1 { text-align: center; color: #2c3e50; border-bottom: 4px solid #e74c3c; padding-bottom: 10px; }
+        .section { background: #2c3e50; color: white; padding: 10px 15px; border-radius: 5px; margin-top: 30px; font-weight: bold; }
+        .q-box { margin-bottom: 25px; padding: 20px; border-left: 5px solid #bdc3c7; background: #fafafa; }
+        .q-text { font-weight: bold; margin-bottom: 12px; color: #34495e; }
+        input[type="text"] { width: 300px; padding: 10px; border: 2px solid #ddd; border-radius: 5px; font-size: 16px; }
+        .res { margin-top: 15px; font-weight: bold; display: none; padding: 10px; border-radius: 5px; }
+        .correct { background-color: #d4edda; color: #155724; }
+        .wrong { background-color: #f8d7da; color: #721c24; }
+        .exp { margin-top: 10px; font-size: 0.9em; color: #555; display: none; background: #fff; border: 1px dashed #bbb; padding: 10px; }
+        .btn-container { text-align: center; margin-top: 40px; }
+        button { padding: 15px 40px; font-size: 18px; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; transition: 0.3s; }
+        .btn-grade { background-color: #e74c3c; color: white; }
+        .btn-grade:hover { background-color: #c0392b; }
+    </style>
+</head>
+<body>
+
+<div class="quiz-container">
+    <h1>🔥 현시법 4-5강: 만점 방지용 마스터 퀴즈</h1>
+    <p style="text-align: center; color: #7f8c8d;">주택임대차보호법과 물권/채권의 모든 지엽적 핵심을 담았습니다.</p>
+
+    <div class="section">I. 물권·채권 및 권리의 충돌 (4강)</div>
+
+    <div class="q-box" data-ans="물권">
+        <div class="q-text">1. 물권과 채권이 충돌할 경우, 공시방법을 갖춘 ( )이 원칙적으로 우선한다. [cite: 611]</div>
+        <input type="text" class="ans-input" placeholder="정답 입력">
+        <div class="res"></div>
+        <div class="exp">설명: 물권은 대세적·배타적 권리이므로 특정인에게만 주장할 수 있는 채권보다 우선합니다. [cite: 611, 612]</div>
+    </div>
+
+    <div class="q-box" data-ans="채권자평등의 원칙">
+        <div class="q-text">2. 여러 개의 채권 사이에서는 성립 순서와 관계없이 모두 평등하게 다루어지는 원칙은? [cite: 622]</div>
+        <input type="text" class="ans-input" placeholder="정답 입력">
+        <div class="res"></div>
+        <div class="exp">설명: 파산 시 채권액 비례로 변제받으며, 먼저 성립했다고 우선권이 주어지지 않습니다. [cite: 622]</div>
+    </div>
+
+    <div class="q-box" data-ans="용익물권">
+        <div class="q-text">3. 지상권, 지역권, 전세권처럼 타인의 부동산을 사용·수익하여 이익을 얻는 물권을 통칭하여 무엇이라 하는가? [cite: 561]</div>
+        <input type="text" class="ans-input" placeholder="정답 입력">
+        <div class="res"></div>
+        <div class="exp">설명: 소유권의 권능 중 사용·수익 권능을 제한적으로 가지는 물권입니다. [cite: 561, 562]</div>
+    </div>
+
+    <div class="q-box" data-ans="통정허위표시">
+        <div class="q-text">4. 실제 거주 목적 없이 기존 채권을 보증금으로 전환하여 대항력 외관만 만든 계약은 민법 제108조 ( )에 해당하여 무효이다. [cite: 535, 540]</div>
+        <input type="text" class="ans-input" placeholder="정답 입력">
+        <div class="res"></div>
+        <div class="exp">설명: 사용·수익 목적이 없는 가장 임대차는 보호받을 수 없습니다. [cite: 535]</div>
+    </div>
+
+    <div class="section">II. 주택임대차보호법 핵심 법리 (5강)</div>
+
+    <div class="q-box" data-ans="다음날">
+        <div class="q-text">5. 임차인이 주택의 인도와 주민등록을 마친 때, 대항력은 ( ) 0시부터 효력이 발생한다. </div>
+        <input type="text" class="ans-input" placeholder="정답 입력">
+        <div class="res"></div>
+        <div class="exp">설명: '그 다음 날부터' 제3자에게 효력이 생깁니다. 근저당권(당일 효력)과 충돌 시 주의해야 합니다. </div>
+    </div>
+
+    <div class="q-box" data-ans="대항력">
+        <div class="q-text">6. 임차주택의 양수인은 임대인의 지위를 승계한 것으로 본다. 이때 임차인이 새로운 주인에게 보증금을 주장할 수 있는 힘은? [cite: 392, 397]</div>
+        <input type="text" class="ans-input" placeholder="정답 입력">
+        <div class="res"></div>
+        <div class="exp">설명: 양수인은 임대인의 의무를 그대로 이어받으므로, 임차인은 양수인에게 대항할 수 있습니다. [cite: 392]</div>
+    </div>
+
+    <div class="q-box" data-ans="확정일자">
+        <div class="q-text">7. 경매나 공매 시 후순위 권리자보다 우선하여 보증금을 변제받으려면 대항요건 외에 무엇을 갖추어야 하는가? [cite: 407]</div>
+        <input type="text" class="ans-input" placeholder="정답 입력">
+        <div class="res"></div>
+        <div class="exp">설명: 대항요건 + 임대차계약서상의 확정일자가 있어야 우선변제권이 생깁니다. [cite: 407]</div>
+    </div>
+
+    <div class="q-box" data-ans="2년">
+        <div class="q-text">8. 기간을 정하지 않거나 1년으로 정한 임대차는 그 기간을 ( )으로 본다. (단, 임차인은 짧은 기간의 유효함을 주장할 수 있다) [cite: 411, 412]</div>
+        <input type="text" class="ans-input" placeholder="정답 입력">
+        <div class="res"></div>
+        <div class="exp">설명: 주임법은 임차인 보호를 위해 최소 2년의 거주 기간을 보장합니다. [cite: 411]</div>
+    </div>
+
+    <div class="q-box" data-ans="최고가매수신고인">
+        <div class="q-text">9. 판례에 따르면, 경매 절차에서 ( )의 지위에 있는 자와 체결한 임대차계약은 적법한 임대권한이 없는 것으로 본다. [cite: 469, 470]</div>
+        <input type="text" class="ans-input" placeholder="정답 입력">
+        <div class="res"></div>
+        <div class="exp">설명: 매각대금을 다 낸 때 소유권을 취득하므로, 그전 상태인 자와의 계약은 우선변제권이 인정되지 않습니다. [cite: 470, 471]</div>
+    </div>
+
+    <div class="q-box" data-ans="직접점유자">
+        <div class="q-text">10. 임차인이 간접점유(전대)하는 경우, 대항력을 취득하기 위해서는 ( )인 전차인이 자신의 주민등록을 마쳐야 한다. [cite: 478, 493]</div>
+        <input type="text" class="ans-input" placeholder="정답 입력">
+        <div class="res"></div>
+        <div class="exp">설명: 실제로 거주하는 사람의 주민등록이 공시방법으로서 기능하기 때문입니다. [cite: 493]</div>
+    </div>
+
+    <div class="q-box" data-ans="실지용도">
+        <div class="q-text">11. 주임법 적용 대상인 '주거용 건물'인지는 공부상 표시가 아닌 ( )에 따라 결정한다. [cite: 448]</div>
+        <input type="text" class="ans-input" placeholder="정답 입력">
+        <div class="res"></div>
+        <div class="exp">설명: 서류상 상가라도 실제 주거용으로 사용하고 일상생활을 영위한다면 보호 대상입니다. [cite: 448]</div>
+    </div>
+
+    <div class="q-box" data-ans="2분의1">
+        <div class="q-text">12. 소액임차인의 최우선변제금은 주택가액(대지 포함)의 ( )을 넘지 못한다. [cite: 426, 434]</div>
+        <input type="text" class="ans-input" placeholder="정답 입력">
+        <div class="res"></div>
+        <div class="exp">설명: 다른 저당권자의 이익을 너무 해치지 않기 위해 한도를 둡니다. [cite: 426, 435]</div>
+    </div>
+
+    <div class="btn-container">
+        <button class="btn-grade" onclick="grade()">채점 및 해설 보기</button>
+        <button onclick="location.reload()" style="background-color: #95a5a6; color: white; margin-left: 10px;">다시 풀기</button>
+    </div>
+</div>
+
+<script>
+    function grade() {
+        const boxes = document.querySelectorAll('.q-box');
+        let score = 0;
+
+        boxes.forEach(box => {
+            const uInput = box.querySelector('.ans-input').value.trim().replace(/\s/g, "");
+            const cAns = box.getAttribute('data-ans').replace(/\s/g, "");
+            const res = box.querySelector('.res');
+            const exp = box.querySelector('.exp');
+
+            res.style.display = 'block';
+            exp.style.display = 'block';
+
+            if (uInput === cAns) {
+                res.innerHTML = "✅ 정답입니다!";
+                res.className = "res correct";
+                score++;
+            } else {
+                res.innerHTML = `❌ 틀렸습니다. (정답: ${box.getAttribute('data-ans')})`;
+                res.className = "res wrong";
+            }
+        });
+
+        alert(`당신의 점수는 ${score} / ${boxes.length} 입니다! 아래 해설을 확인하세요.`);
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    }
+</script>
+
+</body>
+</html>
