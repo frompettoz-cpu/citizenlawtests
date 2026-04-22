@@ -2,31 +2,57 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>민재의 현시법 공부방</title>
     <style>
-        body { font-family: sans-serif; padding: 50px; line-height: 2; }
-        h1 { color: #333; }
-        .quiz-list { list-style: none; padding: 0; }
-        .quiz-list li { margin-bottom: 10px; }
+        body { font-family: 'Pretendard', sans-serif; padding: 40px 20px; line-height: 1.6; background-color: #f0f2f5; color: #333; }
+        .container { max-width: 600px; mx-auto; background: white; padding: 30px; border-radius: 20px; shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        h1 { font-size: 24px; color: #1a1a1a; border-bottom: 2px solid #6366f1; padding-bottom: 10px; margin-bottom: 20px; }
+        p { color: #666; margin-bottom: 30px; }
+        .quiz-list { list-style: none; padding: 0; display: grid; gap: 12px; }
+        .quiz-item { display: flex; align-items: center; }
         .quiz-link { 
+            flex-grow: 1;
             text-decoration: none; 
-            color: #0066cc; 
-            font-weight: bold; 
-            border: 1px solid #0066cc;
-            padding: 10px 20px;
-            border-radius: 5px;
-            display: inline-block;
+            color: #4f46e5; 
+            font-weight: 600; 
+            border: 1.5px solid #e5e7eb;
+            padding: 15px 20px;
+            border-radius: 12px;
+            transition: all 0.2s ease;
+            background-color: #fff;
         }
-        .quiz-link:hover { background: #0066cc; color: white; }
+        .quiz-link:hover { 
+            background-color: #f5f3ff; 
+            border-color: #6366f1; 
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.1);
+        }
+        .status-badge { font-size: 11px; margin-left: 10px; padding: 2px 8px; border-radius: 20px; background: #eee; color: #999; }
     </style>
 </head>
 <body>
-    <h1>✍️ 현시대의 법과 권리 복습 노드</h1>
-    <p>강의별 퀴즈 리스트입니다. 열공합시다!</p>
-    
-    <ul class="quiz-list">
-        <li><a href="quiz_0306.html" class="quiz-link">1. 조세법률주의와 포괄위임금지 (3/6 강의)</a></li>
-        <li><a href="quiz_0313.html" class="quiz-link">2. 다음 강의 퀴즈 (업로드 예정)</a></li>
-    </ul>
+    <div class="container" style="margin: 0 auto;">
+        <h1>✍️ 현시대의 법과 권리 복습 노드</h1>
+        <p>강의별 퀴즈 리스트입니다. 열공합시다!</p>
+        
+        <ul class="quiz-list">
+            <li><a href="quiz_0306.html" class="quiz-link">1. 조세법률주의와 포괄위임금지 (3/6)</a></li>
+            
+            <li><a href="quiz2.html" class="quiz-link">2. 현시법 2주차 복습 퀴즈</a></li>
+            <li><a href="quiz3.html" class="quiz-link">3. 현시법 3주차 복습 퀴즈</a></li>
+            <li><a href="quiz4.html" class="quiz-link">4. 현시법 4주차 복습 퀴즈</a></li>
+            <li><a href="quiz5.html" class="quiz-link">5. 현시법 5주차 복습 퀴즈</a></li>
+            <li><a href="quiz6.html" class="quiz-link">6. 현시법 6주차 복습 퀴즈</a></li>
+            <li><a href="quiz7.html" class="quiz-link">7. 현시법 7주차 복습 퀴즈</a></li>
+            <li><a href="quiz8.html" class="quiz-link">8. 현시법 8주차 복습 퀴즈</a></li>
+            <li><a href="quiz9.html" class="quiz-link">9. 현시법 9주차 복습 퀴즈</a></li>
+            <li><a href="quiz10.html" class="quiz-link">10. 현시법 10주차 복습 퀴즈</a></li>
+        </ul>
+        
+        <footer style="margin-top: 40px; font-size: 12px; color: #aaa; text-align: center;">
+            민재의 MacBook Neo 환경에서 관리 중
+        </footer>
+    </div>
 </body>
 </html>
