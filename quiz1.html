@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>현시법 강의 2 (2026.3.6) 완전 정복 퀴즈</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: #f8fafc;
+        }
+        .blank-input {
+            width: 150px;
+            text-align: center;
+            border-bottom: 2px solid #6366f1;
+            background-color: transparent;
+            font-weight: bold;
+            color: #312e81;
+            transition: all 0.3s ease;
+        }
+        .blank-input:focus {
+            outline: none;
+            border-bottom: 2px solid #4338ca;
+            background-color: #eef2ff;
+        }
+        .blank-input.correct {
+            border-bottom: 2px solid #10b981;
+            color: #064e3b;
+            background-color: #ecfdf5;
+        }
+        .blank-input.incorrect {
+            border-bottom: 2px solid #ef4444;
+            color: #7f1d1d;
+            background-color: #fef2f2;
+        }
+    </style>
+</head>
+<body class="min-h-screen py-10 px-4">
+    <div class="max-w-4xl mx-auto bg-white rounded-3xl shadow-2xl overflow-hidden">
+        <div class="bg-gradient-to-r from-indigo-600 to-violet-700 px-8 py-10 text-white text-center">
+            <h1 class="text-4xl font-black mb-3">현시법 강의 2 완전 정복</h1>
+            <p class="text-indigo-100 text-lg">교수님 강조 포인트 & 필기 내용 포함 (총 15문항)</p>
+            <div class="mt-4 flex justify-center gap-4 text-sm font-medium">
+                <span class="bg-white/20 px-3 py-1 rounded-full">#헌법원칙</span>
+                <span class="bg-white/20 px-3 py-1 rounded-full">#조세법률주의</span>
+                <span class="bg-white/20 px-3 py-1 rounded-full">#심화판례</span>
+            </div>
+        </div>
+
+        <div class="p-8 sm:p-12">
+            <div id="quiz-container" class="space-y-10">
+                <!-- 질문 렌더링 영역 -->
+            </div>
+
+            <div class="mt-16 flex flex-col items-center">
+                <button id="submit-btn" class="bg-indigo-600 hover:bg-indigo-700 text-white font-black py-4 px-12 rounded-2xl shadow-xl transition duration-300 transform hover:scale-105 active:scale-95">
+                    전체 답안 채점하기
+                </button>
+                <p class="text-gray-400 text-sm mt-4">단답형 입력 시 띄어쓰기는 무관합니다.</p>
+            </div>
+
+            <div id="result-section" class="mt-12 hidden bg-indigo-50 rounded-3xl p-10 border-2 border-indigo-200 text-center">
+                <h2 class="text-3xl font-bold text-indigo-900 mb-4">학습 결과 분석</h2>
+                <div id="score-circle" class="w-24 h-24 bg-white border-8 border-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-black text-indigo-600"></div>
+                <p id="score-display" class="text-xl font-medium text-indigo-800 mb-6"></p>
+                <button id="retry-btn" class="bg-white border-2 border-indigo-600 text-indigo-600 hover:bg-indigo-600 hover:text-white font-bold py-2 px-8 rounded-xl transition duration-300">
+                    오답 다시 풀기
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const quizData = [
+            {
+                id: 1,
+                category: "기본 구조",
+                question: "강의안 1페이지의 법체계 위계에 따르면, 국민이 직접 뽑은 국회(입법부)가 만든 법률은 행정부가 만든 <input type='text' class='blank-input' data-id='1'>(이)나 부령보다 상위의 효력을 가진다.",
+                answers: ["대통령령"],
+                explanation: "입법부의 법률이 행정부의 명령보다 우위에 있다는 법치주의의 기본 원리입니다."
+            },
+            {
+                id: 2,
+                category: "필기 포인트",
+                question: "구 지방세법상 건축물 가액의 1,000분의 50(5%)을 매년 재산세로 부과할 경우, 약 <input type='text' class='blank-input' data-id='2'>년이면 재산이 국가에 다 뺏길 정도의 과도한 세율이 된다.",
+                answers: ["20"],
+                explanation: "필기 내용: 1000분의 50을 매년 내면 20년이면 재산이 국고로 귀속될 수 있다는 점을 강조하셨습니다."
+            },
+            {
+                id: 3,
+                category: "포괄위임금지원칙",
+                question: "헌법 제75조는 대통령령 발동 요건으로 '법률에서 <input type='text' class='blank-input' data-id='3'> 범위를 정하여 위임받은 사항'일 것을 요구한다.",
+                answers: ["구체적으로"],
+                explanation: "일반적이고 포괄적인 위임은 금지됩니다."
+            },
+            {
+                id: 4,
+                category: "조세법률주의",
+                question: "조세법률주의의 핵심은 단순히 법률로 정하는 것뿐만 아니라, 그 내용이 정의로워야 한다는 <input type='text' class='blank-input' data-id='4'> 조세법률주의를 의미한다.",
+                answers: ["실질적"],
+                explanation: "형식적 법률주의를 넘어 실질적 정의까지 포함하는 개념입니다."
+            },
+            {
+                id: 5,
+                category: "과세 요건",
+                question: "조세법률주의가 요구하는 과세요건 4가지는 납세의무자, 과세물건, <input type='text' class='blank-input' data-id='5'>, 세율이다.",
+                answers: ["과세표준"],
+                explanation: "세금 계산의 바탕이 되는 수량이나 가액을 의미합니다."
+            },
+            {
+                id: 6,
+                category: "고급오락장 판례",
+                question: "재산세 중과세 대상인 '고급오락장'의 구분과 한계를 대통령령에 넘긴 것은 <input type='text' class='blank-input' data-id='6'>(이)가 지나치게 추상적이고 불명확하여 예측이 불가능하므로 위헌이다.",
+                answers: ["개념"],
+                explanation: "고급이라는 개념만으로는 어떤 건물이 대상인지 알 수 없어 명확성 원칙 위배입니다."
+            },
+            {
+                id: 7,
+                category: "고급사진기 판례",
+                question: "특별소비세법상 '고급사진기' 판례에서 위임을 허용한 이유는 입법기술상 경제사정 변화에 <input type='text' class='blank-input' data-id='7'>으로 대응할 필요가 있었기 때문이다.",
+                answers: ["탄력적", "능동적"],
+                explanation: "카메라 가격은 기술 발전에 따라 급변하므로 법률에 고정하기 어렵습니다."
+            },
+            {
+                id: 8,
+                category: "실무 지식",
+                question: "인간의 노력이 들어간 '부가가치'가 있는 물품 거래 시 주고받는 서류는 <input type='text' class='blank-input' data-id='8'>(이)다.",
+                answers: ["세금계산서"],
+                explanation: "부가가치세가 포함된 서류는 '세금'계산서이며, 토지 거래 등 면세 대상은 그냥 '계산서'입니다."
+            },
+            {
+                id: 9,
+                category: "실무 지식",
+                question: "부가가치세 면세 대상인 '토지'를 사고팔 때 발생하는 서류는 <input type='text' class='blank-input' data-id='9'>(이)다.",
+                answers: ["계산서"],
+                explanation: "토지는 부가가치세가 없으므로 세금계산서가 아닌 일반 계산서를 사용합니다."
+            },
+            {
+                id: 10,
+                category: "가산세의 본질",
+                question: "가산세는 형식은 조세이지만, 본질은 본세의 징수를 확보하기 위한 <input type='text' class='blank-input' data-id='10'>(으)로서의 성격을 갖는다.",
+                answers: ["수단", "행정상제재"],
+                explanation: "납무 의무 이행을 강제하기 위한 도구적 성격이 강합니다."
+            },
+            {
+                id: 11,
+                category: "과잉금지의 원칙",
+                question: "국가 활동의 한계를 정하는 과잉금지원칙 중, 보다 완화된 수단이 있다면 그 방법을 택해야 한다는 원칙은 <input type='text' class='blank-input' data-id='11'> 원칙이다.",
+                answers: ["최소침해성", "피해의최소성"],
+                explanation: "기본권 제한은 필요한 최소한도에 그쳐야 합니다."
+            },
+            {
+                id: 12,
+                category: "부동산 판례 (위헌)",
+                question: "부동산 거래 시 가산세를 부과한 판례에서 위헌 결정이 난 핵심 이유는, 국가가 이미 <input type='text' class='blank-input' data-id='12'>(이)나 검인관청을 통해 거래 자료를 확보할 수 있었기 때문이다.",
+                answers: ["등기소"],
+                explanation: "등기 자료로 다 알 수 있는데 굳이 합계표 안 냈다고 1%나 가산세를 매기는 것은 과도하다는 취지입니다."
+            },
+            {
+                id: 13,
+                category: "비례의 원칙",
+                question: "보호하려는 공익과 침해되는 사익을 비교 형량해야 한다는 원칙은 <input type='text' class='blank-input' data-id='13'> 원칙이다.",
+                answers: ["법익의균형성"],
+                explanation: "과잉금지원칙의 마지막 단계인 이익 형량 과정입니다."
+            },
+            {
+                id: 14,
+                category: "헌법 제38조",
+                question: "헌법 제38조: '모든 국민은 <input type='text' class='blank-input' data-id='14'>(이)가 정하는 바에 의하여 납세의 의무를 진다.'",
+                answers: ["법률"],
+                explanation: "납세의 의무는 반드시 국회가 만든 법률에 근거해야 합니다."
+            },
+            {
+                id: 15,
+                category: "심화 논리",
+                question: "조세법률주의와 포괄위임금지원칙은 결국 행정부의 <input type='text' class='blank-input' data-id='15'> 행정을 방지하여 국민의 재산권을 보호하는 데 목적이 있다.",
+                answers: ["자의적인", "자의적"],
+                explanation: "기준 없이 행정부 마음대로(자의적으로) 법을 집행하는 것을 막는 것이 핵심입니다."
+            }
+        ];
+
+        const quizContainer = document.getElementById('quiz-container');
+        const submitBtn = document.getElementById('submit-btn');
+        const resultSection = document.getElementById('result-section');
+        const scoreDisplay = document.getElementById('score-display');
+        const scoreCircle = document.getElementById('score-circle');
+        const retryBtn = document.getElementById('retry-btn');
+
+        function renderQuiz() {
+            quizContainer.innerHTML = '';
+            quizData.forEach((q, index) => {
+                const questionDiv = document.createElement('div');
+                questionDiv.className = 'p-6 bg-white border border-gray-100 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300';
+                
+                questionDiv.innerHTML = `
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="bg-indigo-600 text-white text-xs font-bold px-3 py-1 rounded-lg">Q${index + 1}</span>
+                        <span class="text-xs text-indigo-400 font-bold tracking-widest uppercase">${q.category}</span>
+                    </div>
+                    <p class="text-xl text-gray-800 leading-relaxed font-medium mb-6">${q.question}</p>
+                    <div id="explanation-${q.id}" class="hidden mt-6 p-5 bg-slate-50 border-l-4 border-indigo-500 rounded-r-xl">
+                        <p class="text-indigo-700 font-bold mb-2">💡 정답: ${q.answers[0]}</p>
+                        <p class="text-gray-600 text-sm leading-relaxed">${q.explanation}</p>
+                    </div>
+                `;
+                quizContainer.appendChild(questionDiv);
+            });
+        }
+
+        function normalize(str) {
+            return str.replace(/\s+/g, '').toLowerCase();
+        }
+
+        function grade() {
+            let score = 0;
+            const inputs = document.querySelectorAll('.blank-input');
+            
+            inputs.forEach(input => {
+                const id = parseInt(input.getAttribute('data-id'));
+                const q = quizData.find(item => item.id === id);
+                const val = normalize(input.value);
+                
+                let isCorrect = q.answers.some(ans => normalize(ans) === val);
+                
+                input.disabled = true;
+                if (isCorrect) {
+                    input.classList.add('correct');
+                    score++;
+                } else {
+                    input.classList.add('incorrect');
+                }
+                document.getElementById(`explanation-${id}`).classList.remove('hidden');
+            });
+
+            resultSection.classList.remove('hidden');
+            scoreCircle.textContent = `${Math.round((score/quizData.length)*100)}`;
+            scoreDisplay.textContent = `총 ${quizData.length}문항 중 ${score}문항을 맞혔습니다!`;
+            submitBtn.classList.add('hidden');
+            
+            window.scrollTo({ top: resultSection.offsetTop - 50, behavior: 'smooth' });
+        }
+
+        submitBtn.addEventListener('click', grade);
+        retryBtn.addEventListener('click', () => {
+            submitBtn.classList.remove('hidden');
+            resultSection.classList.add('hidden');
+            renderQuiz();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        renderQuiz();
+    </script>
+</body>
+</html>
