@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>현시법 3강 마스터 테스트</title>
+    <style>
+        body { font-family: 'Malgun Gothic', sans-serif; background-color: #f0f2f5; padding: 20px; line-height: 1.6; }
+        .quiz-container { max-width: 900px; margin: 0 auto; background: #fff; padding: 40px; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+        h1 { text-align: center; color: #1a73e8; border-bottom: 4px solid #1a73e8; padding-bottom: 15px; }
+        .intro { text-align: center; color: #5f6368; font-weight: bold; margin-bottom: 30px; }
+        .section { background: #e8f0fe; color: #1967d2; padding: 10px 20px; border-radius: 8px; margin-top: 30px; font-weight: bold; font-size: 1.2em; }
+        .q-box { margin-bottom: 30px; padding: 20px; border: 1px solid #dadce0; border-radius: 10px; transition: 0.3s; }
+        .q-box:hover { border-color: #1a73e8; background-color: #f8f9fa; }
+        .q-text { font-size: 1.1em; font-weight: 600; margin-bottom: 15px; color: #202124; }
+        input[type="text"] { width: 100%; max-width: 400px; padding: 12px; border: 2px solid #ddd; border-radius: 6px; font-size: 16px; outline: none; }
+        input[type="text"]:focus { border-color: #1a73e8; }
+        .res { margin-top: 15px; font-weight: bold; display: none; padding: 10px; border-radius: 5px; }
+        .correct { background-color: #e6f4ea; color: #1e8e3e; border: 1px solid #1e8e3e; }
+        .wrong { background-color: #fce8e6; color: #d93025; border: 1px solid #d93025; }
+        .exp { margin-top: 10px; font-size: 0.95em; color: #5f6368; display: none; line-height: 1.5; border-left: 4px solid #1a73e8; padding-left: 15px; }
+        .btn-wrap { text-align: center; margin-top: 40px; border-top: 2px solid #eee; padding-top: 20px; }
+        button { padding: 15px 40px; font-size: 1.1em; background-color: #1a73e8; color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; }
+        button:hover { background-color: #174ea6; }
+        .final-score { font-size: 1.5em; text-align: center; margin-top: 20px; color: #1a73e8; display: none; }
+    </style>
+</head>
+<body>
+
+<div class="quiz-container">
+    <h1>📝 현시법 제3강: 물권법 기초 마스터</h1>
+    <p class="intro">이 퀴즈를 모두 맞히면 민법 물권 변동 파트 만점 예약입니다!</p>
+
+    <div class="section">1. 물권과 채권의 기초</div>
+    
+    <div class="q-box" data-ans="물권">
+        <div class="q-text">1. 특정의 독립된 물건을 직접 지배하여 이익을 얻는 권리로, 누구에게나 주장할 수 있는 '배타적·독점적 권리'는?</div>
+        <input type="text" class="ans-input" placeholder="정답 입력">
+        <div class="res"></div>
+        <div class="exp">설명: 물권은 물건을 대상으로 하며, 누구에게나 주장할 수 있는 '대세효'가 있습니다. [cite: 247, 254]</div>
+    </div>
+
+    <div class="q-box" data-ans="채권">
+        <div class="q-text">2. 특정인(채권자)이 특정인(채무자)에 대하여 일정한 행위(급부)를 청구할 수 있는 권리는?</div>
+        <input type="text" class="ans-input" placeholder="정답 입력">
+        <div class="res"></div>
+        <div class="exp">설명: 채권은 특정 사람에게만 주장할 수 있는 '상대성'을 가집니다. [cite: 247, 255]</div>
+    </div>
+
+    <div class="section">2. 물권변동과 공시제도</div>
+
+    <div class="q-box" data-ans="공시의 원칙">
+        <div class="q-text">3. 물권의 존재나 변동을 외부에서 인식할 수 있도록 등기나 점유 등의 방법을 수반해야 한다는 원칙은?</div>
+        <input type="text" class="ans-input" placeholder="정답 입력">
+        <div class="res"></div>
+        <div class="exp">설명: 거래의 안전을 위해 물권이 누구에게 있는지 남들이 알 수 있게 해야 합니다. [cite: 258, 259]</div>
+    </div>
+
+    <div class="q-box" data-ans="등기">
+        <div class="q-text">4. 부동산 물권변동의 대표적인 공시방법은?</div>
+        <input type="text" class="ans-input" placeholder="정답 입력">
+        <div class="res"></div>
+        <div class="exp">설명: 민법 제186조에 따라 부동산은 등기해야 소유권 변동의 효력이 생깁니다. [cite: 260, 275, 281]</div>
+    </div>
+
+    <div class="q-box" data-ans="점유">
+        <div class="q-text">5. 동산 물권의 공시방법이며, 공신력이 인정되는 수단은?</div>
+        <input type="text" class="ans-input" placeholder="정답 입력">
+        <div class="res"></div>
+        <div class="exp">설명: 동산은 현재 가지고 있는 상태(점유)를 공시방법으로 봅니다. [cite: 265]</div>
+    </div>
+
+    <div class="section">3. 선의취득과 등기</div>
+
+    <div class="q-box" data-ans="선의취득">
+        <div class="q-text">6. 무권리자로부터 동산을 평온·공연하게 양수한 자가 선의·무과실인 경우 즉시 소유권을 취득하는 제도는?</div>
+        <input type="text" class="ans-input" placeholder="정답 입력">
+        <div class="res"></div>
+        <div class="exp">설명: 동산 거래의 안전을 위해 공신력을 인정하는 제도입니다. (민법 제249조) [cite: 268, 287]</div>
+    </div>
+
+    <div class="q-box" data-ans="2년">
+        <div class="q-text">7. 도품이나 유실물의 경우, 피해자는 도난/유실한 날로부터 ( ) 내에 물건의 반환을 청구할 수 있는가?</div>
+        <input type="text" class="ans-input" placeholder="정답 입력">
+        <div class="res"></div>
+        <div class="exp">설명: 민법 제250조에 따라 2년의 특례 기간이 주어집니다. 단, 금전은 제외됩니다. [cite: 290, 291]</div>
+    </div>
+
+    <div class="q-box" data-ans="근저당권">
+        <div class="q-text">8. 등기부 '을구'에서 확인할 수 있으며, 장래에 생길 채권을 최고액 범위 내에서 담보하는 권리는?</div>
+        <input type="text" class="ans-input" placeholder="정답 입력">
+        <div class="res"></div>
+        <div class="exp">설명: 은행 대출 시 주로 설정하며, 채권최고액(보통 120%)을 등기합니다. [cite: 328, 333, 344]</div>
+    </div>
+
+    <div class="section">4. 미등기 매수인의 지위</div>
+
+    <div class="q-box" data-ans="점유사용권">
+        <div class="q-text">9. 대법원 판례에 따라, 부동산을 매수하여 인도받았으나 아직 등기를 하지 않은 매수인이 가지는 권리는?</div>
+        <input type="text" class="ans-input" placeholder="정답 입력">
+        <div class="res"></div>
+        <div class="exp">설명: 법적 소유권은 없으나 매매계약의 효력상 점유하고 사용할 권리는 인정됩니다. [cite: 359]</div>
+    </div>
+
+    <div class="q-box" data-ans="채권자대위권">
+        <div class="q-text">10. 미등기 매수인이 건물의 불법 점거자에게 퇴거를 요구할 때, 직접 소유권을 주장하지 못하고 매도인의 권리를 대신 행사하는 방법은?</div>
+        <input type="text" class="ans-input" placeholder="정답 입력">
+        <div class="res"></div>
+        <div class="exp">설명: 미등기 양수인은 소유권이 없으므로 양도인을 '대위'하여 권리를 행사해야 합니다. [cite: 368, 376, 377]</div>
+    </div>
+
+    <div class="final-score" id="finalScore"></div>
+
+    <div class="btn-wrap">
+        <button onclick="grade()">시험 결과 확인 및 채점</button>
+        <button onclick="location.reload()" style="background-color: #5f6368; margin-left: 10px;">다시 풀기</button>
+    </div>
+</div>
+
+<script>
+    function grade() {
+        const boxes = document.querySelectorAll('.q-box');
+        let score = 0;
+
+        boxes.forEach(box => {
+            const uAns = box.querySelector('.ans-input').value.trim().replace(/\s/g, "");
+            const cAns = box.getAttribute('data-ans').replace(/\s/g, "");
+            const resDiv = box.querySelector('.res');
+            const expDiv = box.querySelector('.exp');
+
+            resDiv.style.display = 'block';
+            expDiv.style.display = 'block';
+
+            if (uAns === cAns) {
+                resDiv.innerHTML = "✅ 정답입니다!";
+                resDiv.className = "res correct";
+                score++;
+            } else {
+                resDiv.innerHTML = `❌ 틀렸습니다! (정답: ${box.getAttribute('data-ans')})`;
+                resDiv.className = "res wrong";
+            }
+        });
+
+        const scoreDiv = document.getElementById('finalScore');
+        scoreDiv.style.display = 'block';
+        scoreDiv.innerHTML = `💯 당신의 점수는 ${score} / ${boxes.length} 입니다!`;
+        
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+</script>
+
+</body>
+</html>
