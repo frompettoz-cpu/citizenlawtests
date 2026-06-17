@@ -4,53 +4,110 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>민재의 현시법 공부방</title>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Pretendard', sans-serif; padding: 40px 20px; line-height: 1.6; background-color: #f0f2f5; color: #333; }
-        .container { max-width: 600px; margin: 0 auto; background: white; padding: 30px; border-radius: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        h1 { font-size: 24px; color: #1a1a1a; border-bottom: 2px solid #6366f1; padding-bottom: 10px; margin-bottom: 20px; }
-        p { color: #666; margin-bottom: 30px; }
-        .quiz-list { list-style: none; padding: 0; display: grid; gap: 12px; }
-        .quiz-item { display: flex; align-items: center; }
+        body { 
+            font-family: 'Jua', sans-serif; /* 폰트 적용 */
+            padding: 40px 20px; 
+            line-height: 1.6; 
+            background-color: #fff0f5; /* 부드러운 파스텔 핑크 배경 */
+            color: #5a5a5a; 
+        }
+        .container { 
+            max-width: 600px; 
+            margin: 0 auto; 
+            background: white; 
+            padding: 35px 30px; 
+            border-radius: 35px; /* 더 동글동글하게 */
+            border: 3px dashed #ffb6c1; /* 귀여운 점선 테두리 */
+            box-shadow: 0 8px 20px rgba(255, 182, 193, 0.4); 
+        }
+        h1 { 
+            font-size: 28px; 
+            color: #ff8c00; 
+            text-align: center;
+            border-bottom: 3px dotted #ffd700; 
+            padding-bottom: 15px; 
+            margin-bottom: 15px; 
+        }
+        p { 
+            text-align: center;
+            color: #87cefa; 
+            font-size: 18px;
+            margin-bottom: 30px; 
+        }
+        .quiz-list { 
+            list-style: none; 
+            padding: 0; 
+            display: grid; 
+            gap: 15px; 
+        }
         .quiz-link { 
-            flex-grow: 1;
+            display: block;
             text-decoration: none; 
-            color: #4f46e5; 
-            font-weight: 600; 
-            border: 1.5px solid #e5e7eb;
+            color: #7b68ee; 
+            font-size: 18px;
+            background-color: #f0f8ff; /* 파스텔 블루 버튼 */
+            border: 2px solid #add8e6;
             padding: 15px 20px;
-            border-radius: 12px;
-            transition: all 0.2s ease;
-            background-color: #fff;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            text-align: center;
         }
         .quiz-link:hover { 
-            background-color: #f5f3ff; 
-            border-color: #6366f1; 
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.1);
+            background-color: #ffe4e1; 
+            border-color: #ffb6c1; 
+            color: #ff69b4;
+            /* 마우스 올리면 살짝 위로 올라가면서 기우뚱하는 귀여운 효과 */
+            transform: translateY(-4px) rotate(-1deg);
+            box-shadow: 0 6px 15px rgba(255, 182, 193, 0.5);
         }
-        .status-badge { font-size: 11px; margin-left: 10px; padding: 2px 8px; border-radius: 20px; background: #eee; color: #999; }
+        
+        /* 최종 보스 퀴즈를 위한 특별한 스타일 */
+        .final-quiz {
+            background-color: #fffacd; /* 파스텔 옐로우 */
+            border-color: #ffd700;
+            color: #ff4500;
+            font-size: 20px;
+            margin-top: 10px;
+        }
+        .final-quiz:hover {
+            background-color: #ffdab9;
+            border-color: #ffa07a;
+            transform: translateY(-4px) rotate(1deg); /* 반대 방향으로 기우뚱 */
+            box-shadow: 0 6px 15px rgba(255, 160, 122, 0.5);
+        }
+
+        footer { 
+            margin-top: 40px; 
+            font-size: 15px; 
+            color: #d8bfd8; 
+            text-align: center; 
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>✍️ 현시대의 법과 권리 복습 노드</h1>
-        <p>강의별 퀴즈 리스트입니다. 열공합시다!</p>
+        <h1>🐾 현시대의 법과 권리 복습 노드 🐾</h1>
+        <p>✨ 강의별 퀴즈 리스트! 오늘두 열공 ✨</p>
         
         <ul class="quiz-list">
-            <li class="quiz-item"><a href="quiz1.html" class="quiz-link">1. 현시법 1주차 복습 퀴즈</a></li>
-            <li class="quiz-item"><a href="quiz2.html" class="quiz-link">2. 현시법 2주차 복습 퀴즈</a></li>
-            <li class="quiz-item"><a href="quiz3.html" class="quiz-link">3. 현시법 3주차 복습 퀴즈</a></li>
-            <li class="quiz-item"><a href="quiz4.html" class="quiz-link">4. 현시법 4주차 복습 퀴즈</a></li>
-            <li class="quiz-item"><a href="quiz5.html" class="quiz-link">5. 현시법 5주차 복습 퀴즈</a></li>
-            <li class="quiz-item"><a href="quiz6.html" class="quiz-link">6. 현시법 6주차 복습 퀴즈</a></li>
-            <li class="quiz-item"><a href="quiz7.html" class="quiz-link">7. 현시법 7주차 복습 퀴즈</a></li>
-            <li class="quiz-item"><a href="quiz8.html" class="quiz-link">8. 현시법 8주차 복습 퀴즈</a></li>
-            <li class="quiz-item"><a href="quiz9.html" class="quiz-link">9. 현시법 9주차 복습 퀴즈</a></li>
-            <li class="quiz-item"><a href="quiz10.html" class="quiz-link">10. 현시법 10주차 복습 퀴즈</a></li>
+            <li><a href="quiz1.html" class="quiz-link">🌱 1. 현시법 1주차 복습 퀴즈</a></li>
+            <li><a href="quiz2.html" class="quiz-link">🌱 2. 현시법 2주차 복습 퀴즈</a></li>
+            <li><a href="quiz3.html" class="quiz-link">🌱 3. 현시법 3주차 복습 퀴즈</a></li>
+            <li><a href="quiz4.html" class="quiz-link">🌱 4. 현시법 4주차 복습 퀴즈</a></li>
+            <li><a href="quiz5.html" class="quiz-link">🌱 5. 현시법 5주차 복습 퀴즈</a></li>
+            <li><a href="quiz6.html" class="quiz-link">🌿 6. 현시법 6주차 복습 퀴즈</a></li>
+            <li><a href="quiz7.html" class="quiz-link">🌿 7. 현시법 7주차 복습 퀴즈</a></li>
+            <li><a href="quiz8.html" class="quiz-link">🌿 8. 현시법 8주차 복습 퀴즈</a></li>
+            <li><a href="quiz9.html" class="quiz-link">🍀 9. 현시법 9주차 복습 퀴즈</a></li>
+            <li><a href="quiz10.html" class="quiz-link">🍀 10. 현시법 10주차 복습 퀴즈</a></li>
+            
+            <li><a href="quiz_final.html" class="quiz-link final-quiz">🔥 현시법 기말고사 최종 파이널 50제 🔥</a></li>
         </ul>
         
-        <footer style="margin-top: 40px; font-size: 12px; color: #aaa; text-align: center;">
-            민재의 MacBook Neo 환경에서 관리 중
+        <footer>
+            💻 민재의 MacBook Neo 환경에서 관리 중 💻
         </footer>
     </div>
 </body>
