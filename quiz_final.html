@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>2026-1 현시법 기말고사 최종 병기 (계산문제 포함)</title>
+    <style>
+        body { font-family: 'Malgun Gothic', sans-serif; background-color: #f8f9fa; padding: 20px; line-height: 1.7; color: #343a40; }
+        .exam-paper { max-width: 1000px; margin: 0 auto; background: #fff; padding: 50px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); border-top: 12px solid #2c3e50; }
+        .exam-header { text-align: center; border-bottom: 4px double #2c3e50; padding-bottom: 20px; margin-bottom: 40px; }
+        .exam-title { font-size: 34px; font-weight: 900; color: #1a252f; margin-bottom: 10px; }
+        .exam-subtitle { font-size: 18px; color: #c0392b; font-weight: bold; }
+        .section-title { background: #34495e; color: white; padding: 12px 20px; border-radius: 6px; margin-top: 40px; font-size: 20px; font-weight: bold; }
+        .calc-section { background: #c0392b; color: white; padding: 12px 20px; border-radius: 6px; margin-top: 40px; font-size: 20px; font-weight: bold; }
+        
+        .q-container { margin-bottom: 25px; padding: 15px; border-bottom: 1px dashed #bdc3c7; }
+        .q-text { font-size: 16px; font-weight: 600; margin-bottom: 10px; }
+        .q-num { color: #e74c3c; font-weight: 900; font-size: 18px; }
+        
+        input[type="text"] { width: 160px; padding: 5px 8px; font-size: 16px; font-weight: bold; color: #2980b9; border: none; border-bottom: 2px solid #34495e; background: transparent; text-align: center; outline: none; transition: 0.3s; }
+        input[type="text"]:focus { border-bottom-color: #e74c3c; background-color: #fdf2f0; width: 200px; }
+        
+        .res-box { margin-top: 10px; font-size: 15px; font-weight: bold; display: none; padding: 10px; border-radius: 5px; }
+        .correct { background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+        .wrong { background-color: #f8d7da; color: #721c24; border: 1px solid #f5c2c7; }
+        .exp { font-size: 14px; color: #555; display: none; margin-top: 10px; padding: 15px; background: #f1f2f6; border-left: 4px solid #2980b9; line-height: 1.6; }
+        
+        .btn-zone { text-align: center; margin-top: 50px; }
+        button { padding: 18px 60px; font-size: 22px; font-weight: bold; color: white; background-color: #c0392b; border: none; border-radius: 8px; cursor: pointer; transition: 0.3s; box-shadow: 0 4px 6px rgba(192, 57, 43, 0.3); }
+        button:hover { background-color: #922b21; transform: translateY(-3px); box-shadow: 0 6px 12px rgba(192, 57, 43, 0.4); }
+        .score-board { font-size: 30px; font-weight: 900; color: #2c3e50; margin-top: 30px; display: none; }
+    </style>
+</head>
+<body>
+
+<div class="exam-paper">
+    <div class="exam-header">
+        <div class="exam-title">현시법 기말고사 절대 방어선 (최종 50제)</div>
+        <div class="exam-subtitle">※ 계산 문제 포함 / 판례 원문 워딩 철저 반영 ※</div>
+    </div>
+
+    <div class="calc-section">🔥 [특집] 상속분 및 유류분 계산 킬러 문제</div>
+
+    <div class="q-container" data-ans="2억">
+        <div class="q-text"><span class="q-num">[계산1]</span> 피상속인이 사망하며 남긴 실제 상속재산은 14억 원이다. 상속인은 배우자 A와 자녀 B, C가 있다. A는 생전에 피상속인으로부터 7억 원을 증여(특별수익) 받았다. 
+        이때 간주상속재산은 21억 원(14+7)이 되며, 법정상속비율은 A:B:C = 3:2:2 이다. 구체적 상속분 산정에 따라 배우자 A가 14억 원 중 실제로 분할받을 금액은 얼마인가? (정답 예시: 5억)</div>
+        ( <input type="text"> )
+        <div class="res-box"></div>
+        <div class="exp">해설: <br>
+        1) 간주재산: 14억 + 7억(A의 증여) = 21억<br>
+        2) 법정상속분: A = 21억 * 3/7 = 9억, B = 21억 * 2/7 = 6억, C = 21억 * 2/7 = 6억<br>
+        3) 구체적 상속분: A는 이미 7억을 받았으므로 9억 - 7억 = <b>2억</b>. B와 C는 각각 6억.<br>
+        4) 검증: 2억(A) + 6억(B) + 6억(C) = 남아있는 실제 재산 14억.</div>
+    </div>
+
+    <div class="q-container" data-ans="나머지상속인">
+        <div class="q-text"><span class="q-num">[계산2]</span> 피상속인이 사망하며 남긴 상속재산은 4억 원이다. 자녀 A는 10억 원을 생전 증여받았고 자녀 B는 받은 것이 없다. 
+        계산상 A의 법정상속분은 7억(14억의 1/2)이나 이미 10억을 받아 '초과특별수익자'가 된다. 이때 A는 초과분 3억을 반환할 필요가 없으며, 결과적으로 부족분은 ( <input type="text"> )들의 부담으로 돌아가 남은 4억은 전부 B가 가져가게 된다.</div>
+        <div class="res-box"></div>
+        <div class="exp">해설: 10강 판례. 초과특별수익자는 초과분을 반환하지 않으며, 그 부족분은 '나머지 상속인'이 안분하여 부담합니다.</div>
+    </div>
+
+    <div class="section-title">제1장. 상속의 개시와 상속재산의 분할 (9~10강)</div>
+    
+    <div class="q-container" data-ans="선급">
+        <div class="q-text"><span class="q-num">[3]</span> 민법 제1008조 특별수익자의 상속분 규정은 공동상속인들 사이의 공평을 기하기 위하여 그 수증재산을 상속분의 ( <input type="text"> )으로 다루어 구체적인 상속분을 산정함에 있어 참작하려는 취지이다.</div>
+        <div class="res-box"></div><div class="exp">해설: 9강. 생전에 미리 받은 재산은 상속분을 미리 받은 것(선급)으로 칩니다.</div>
+    </div>
+    <div class="q-container" data-ans="상속개시">
+        <div class="q-text"><span class="q-num">[4]</span> 구체적 상속분을 산정함에 있어서는, ( <input type="text"> ) 당시를 기준으로 상속재산과 특별수익재산을 평가하여 이를 기초로 하여야 한다.</div>
+        <div class="res-box"></div><div class="exp">해설: 10강 판례. 증여 당시나 재판 당시가 아닙니다.</div>
+    </div>
+    <div class="q-container" data-ans="공평">
+        <div class="q-text"><span class="q-num">[5]</span> 금전채권은 원칙적으로 당연히 분할되나, 초과특별수익자가 있는 등 공동상속인들 사이의 ( <input type="text"> )을 도모해야 할 특별한 사정이 있으면 예외적으로 분할 대상이 될 수 있다.</div>
+        <div class="res-box"></div><div class="exp">해설: 10강. 가분채권(예금)의 예외적 상속재산분할 요건입니다.</div>
+    </div>
+    <div class="q-container" data-ans="채권자">
+        <div class="q-text"><span class="q-num">[6]</span> 가분채무(빚)를 상속인 1인이 전적으로 부담하기로 하는 약정은 면책적 채무인수이므로 반드시 ( <input type="text"> )의 승낙을 필요로 한다.</div>
+        <div class="res-box"></div><div class="exp">해설: 10강. 빚은 가족끼리 합의한다고 몰아줄 수 없고, 은행(채권자)이 허락해야 합니다.</div>
+    </div>
+
+    <div class="section-title">제2장. 상속의 승인/포기와 사해행위 (11강)</div>
+
+    <div class="q-container" data-ans="안날">
+        <div class="q-text"><span class="q-num">[7]</span> 상속인은 상속개시 있음을 ( <input type="text"> )로부터 3월 내에 단순승인이나 한정승인 또는 포기를 할 수 있다. (띄어쓰기 없이)</div>
+        <div class="res-box"></div><div class="exp">해설: 11강. 사망한 날이 아니라 '사망 사실을 안 날'입니다.</div>
+    </div>
+    <div class="q-container" data-ans="중대한과실">
+        <div class="q-text"><span class="q-num">[8]</span> 상속채무가 재산을 초과하는 사실을 ( <input type="text"> ) 없이 위 3월의 기간 내에 알지 못한 상속인만 특별한정승인을 할 수 있다. (띄어쓰기 없이)</div>
+        <div class="res-box"></div><div class="exp">해설: 11강. 조금만 주의했어도 알 수 있었다면 보호받지 못합니다.</div>
+    </div>
+    <div class="q-container" data-ans="처분행위">
+        <div class="q-text"><span class="q-num">[9]</span> 법정단순승인 사유로서 상속인이 상속재산에 대한 ( <input type="text"> )를 한 때에는 단순승인한 것으로 본다.</div>
+        <div class="res-box"></div><div class="exp">해설: 11강. 남긴 차를 팔아버리는 등의 행위는 상속을 승인한 것으로 간주됩니다.</div>
+    </div>
+    <div class="q-container" data-ans="사해행위취소">
+        <div class="q-text"><span class="q-num">[10]</span> 상속의 포기는 인적 결단의 성질을 가지므로 채권자의 일반재산을 보전하기 위한 ( <input type="text"> )의 대상이 되지 아니한다. (띄어쓰기 없이)</div>
+        <div class="res-box"></div><div class="exp">해설: 11강 킬러. 상속포기 = 사해행위 X / 상속재산분할협의 = 사해행위 O.</div>
+    </div>
+
+    <div class="section-title">제3장. 배우자 단독상속 전합 및 유류분 (12강)</div>
+
+    <div class="q-container" data-ans="단독상속인">
+        <div class="q-text"><span class="q-num">[11]</span> [2023 전합] 배우자와 자녀 중 자녀 전부가 상속을 포기한 경우, 손자녀가 공동상속인이 되는 것이 아니라 피상속인의 배우자가 ( <input type="text"> )이 된다.</div>
+        <div class="res-box"></div><div class="exp">해설: 12강. 판례가 변경된 초핵심 내용입니다.</div>
+    </div>
+    <div class="q-container" data-ans="적용되지않는다">
+        <div class="q-text"><span class="q-num">[12]</span> 공동상속인 중 '일부'가 포기한 경우를 규율하는 민법 제1043조는 자녀 전부가 포기한 경우에는 ( ). (띄어쓰기 없이)</div>
+        <div class="res-box"></div><div class="exp">해설: 12강. 자녀 '전원'이 포기하면 일부 포기 조문을 적용할 수 없습니다.</div>
+    </div>
+    <div class="q-container" data-ans="포기한사람">
+        <div class="q-text"><span class="q-num">[13]</span> 민법과 달리 상속세 및 증여세법상의 \"상속인\"에는 상속을 ( <input type="text"> )도 포함되어 납세의무를 진다. (띄어쓰기 없이)</div>
+        <div class="res-box"></div><div class="exp">해설: 12강 세법. 세금을 피하려고 포기하는 것을 막기 위함입니다.</div>
+    </div>
+    <div class="q-container" data-ans="사실심변론종결시">
+        <div class="q-text"><span class="q-num">[14]</span> 유류분액 산정의 시가는 원칙적으로 상속개시 당시이나, 가액반환을 명하는 경우에는 그 가액은 ( <input type="text"> )를 기준으로 산정하여야 한다. (띄어쓰기 없이)</div>
+        <div class="res-box"></div><div class="exp">해설: 12강 킬러. 원칙(상속개시)과 가액반환 예외(변론종결시)를 명확히 구분해야 합니다.</div>
+    </div>
+    <div class="q-container" data-ans="증여당시">
+        <div class="q-text"><span class="q-num">[15]</span> 수증자가 자기 비용으로 지목을 변경하여 가액이 증가한 경우(성상변경), 증가된 가액을 반영하지 않고 ( <input type="text"> )의 성상 등을 기준으로 상속개시 시의 가액을 산정한다. (띄어쓰기 없이)</div>
+        <div class="res-box"></div><div class="exp">해설: 12강. 임야를 대지로 바꿨더라도, '임야'인 상태의 현재 가치로 계산합니다.</div>
+    </div>
+
+    <div class="section-title">제4장. 계약의 해제와 제3자 (13강)</div>
+
+    <div class="q-container" data-ans="최고">
+        <div class="q-text"><span class="q-num">[16]</span> 이행지체의 경우 당사자 일방은 상당한 기간을 정하여 ( <input type="text"> )하고 해제할 수 있으나, 정기행위나 이행불능의 경우에는 요하지 않는다.</div>
+        <div class="res-box"></div><div class="exp">해설: 13강. 기회를 주는 독촉(최고) 절차입니다.</div>
+    </div>
+    <div class="q-container" data-ans="이자">
+        <div class="q-text"><span class="q-num">[17]</span> 계약이 해제되어 원상회복의무를 지는 경우, 반환할 금전에는 받은 날로부터 ( <input type="text"> )를 가하여야 한다.</div>
+        <div class="res-box"></div><div class="exp">해설: 13강. 부당이득 반환의 성질이므로 이자를 붙여 돌려줍니다.</div>
+    </div>
+    <div class="q-container" data-ans="완전한권리">
+        <div class="q-text"><span class="q-num">[18]</span> 해제 시 보호받는 제3자란 해제 전에 새로운 이해관계를 가졌을 뿐 아니라 등기, 인도 등으로 ( <input type="text"> )를 취득한 자를 말한다. (띄어쓰기 없이)</div>
+        <div class="res-box"></div><div class="exp">해설: 13강. 채권 양수나 압류만으로는 보호받지 못합니다.</div>
+    </div>
+    <div class="q-container" data-ans="악의">
+        <div class="q-text"><span class="q-num">[19]</span> 합의해제 후 말소등기 전에 이해관계를 맺은 제3자가 있을 때, 그 제3자가 ( <input type="text"> )라는 입증책임은 계약해제를 주장하는 자에게 있다.</div>
+        <div class="res-box"></div><div class="exp">해설: 13강. 제3자는 선의로 추정되므로 해제 주장자가 증명해야 합니다.</div>
+    </div>
+
+    <div class="section-title">제5장. 해제와 조세채권 (14강)</div>
+
+    <div class="q-container" data-ans="소급">
+        <div class="q-text"><span class="q-num">[20]</span> 양도대금을 받았어도 매매계약이 합의해제되면 효력이 ( <input type="text"> )하여 상실되므로 양도소득세 부과처분은 위법하다.</div>
+        <div class="res-box"></div><div class="exp">해설: 14강. 처음부터 없었던 일이 됩니다. 부가가치세도 동일합니다.</div>
+    </div>
+    <div class="q-container" data-ans="유통세">
+        <div class="q-text"><span class="q-num">[21]</span> 반면 취득세는 재화의 이전이라는 사실 자체를 포착하는 ( <input type="text"> )의 일종이므로 계약이 해제되더라도 이미 성립한 조세채권에는 영향을 주지 않는다.</div>
+        <div class="res-box"></div><div class="exp">해설: 14강. 샀다가 물려도 취득세는 안 돌려줍니다.</div>
+    </div>
+
+    <div class="section-title">제6장. 납세의무 확정과 위약금 (15강)</div>
+
+    <div class="q-container" data-ans="결정">
+        <div class="q-text"><span class="q-num">[22]</span> 상속세와 증여세는 납세자가 신고하더라도 정부가 ( <input type="text"> )하는 때에 비로소 확정된다. (부과과세방식)</div>
+        <div class="res-box"></div><div class="exp">해설: 15강. 부가가치세는 '신고' 시 확정되나 상증세는 '결정' 시 확정됩니다.</div>
+    </div>
+    <div class="q-container" data-ans="넘는">
+        <div class="q-text"><span class="q-num">[23]</span> 위약금이란 본래의 계약 내용이 되는 지급 자체에 대한 손해를 ( <input type="text"> ) 손해에 대하여 배상하는 금전을 말한다.</div>
+        <div class="res-box"></div><div class="exp">해설: 15강. 단순 원상회복 초과분에 세금을 매깁니다.</div>
+    </div>
+
+    <div class="section-title">제7장. 강행법규와 권리남용 (16강)</div>
+
+    <div class="q-container" data-ans="반하지않는다">
+        <div class="q-text"><span class="q-num">[24]</span> 강행법규에 위반되어 무효인 약정을 맺은 자가 스스로 무효를 주장하는 것은 신의칙에 ( ). (띄어쓰기 없이)</div>
+        <div class="res-box"></div><div class="exp">해설: 16강 킬러. 뻔뻔해도 강행법규 수호가 먼저이므로 신의칙 위반이 아닙니다.</div>
+    </div>
+    <div class="q-container" data-ans="개시전">
+        <div class="q-text"><span class="q-num">[25]</span> 상속 ( <input type="text"> )에 한 상속포기 약정은 무효이므로, 나중에 상속을 주장해도 신의칙 위반이 아니다. (띄어쓰기 없이)</div>
+        <div class="res-box"></div><div class="exp">해설: 16강. 살아생전에 미리 포기할 수 없습니다.</div>
+    </div>
+    <div class="q-container" data-ans="객관적인사정">
+        <div class="q-text"><span class="q-num">[26]</span> 권리남용의 주관적 요건(나쁜 의도)은 권리자의 정당한 이익을 결여한 것으로 보여지는 ( <input type="text"> )에 의하여 추인할 수 있다. (띄어쓰기 없이)</div>
+        <div class="res-box"></div><div class="exp">해설: 16강. 속마음을 외부 상황으로 유추합니다.</div>
+    </div>
+    <div class="q-container" data-ans="권리남용">
+        <div class="q-text"><span class="q-num">[27]</span> 침범 면적이 51㎡(188만 원)에 불과함에도 막대한 비용이 드는 송전선의 철거를 구하는 것은 ( <input type="text"> )에 해당하여 허용되지 않는다.</div>
+        <div class="res-box"></div><div class="exp">해설: 16강. 정당한 이익 없는 권리 행사입니다.</div>
+    </div>
+
+    <div class="section-title">제8장. 조세 신의칙과 권리의 주체 (17~18강)</div>
+
+    <div class="q-container" data-ans="공적인견해표명">
+        <div class="q-text"><span class="q-num">[28]</span> 과세관청에 신의칙이 적용되려면 관청이 납세자에게 신뢰의 대상이 되는 ( <input type="text"> )을/를 하여야 한다. (띄어쓰기 없이)</div>
+        <div class="res-box"></div><div class="exp">해설: 17강. 비공식적 조언은 해당하지 않습니다.</div>
+    </div>
+    <div class="q-container" data-ans="조세탈루">
+        <div class="q-text"><span class="q-num">[29]</span> 납세자에게 신의칙(금반언)을 적용해 권리를 제한하려면 그 모순된 행태가 ( <input type="text"> )의 목적에서 비롯된 것이어야 한다.</div>
+        <div class="res-box"></div><div class="exp">해설: 17강. 세금 떼먹으려는 악의가 있어야 합니다.</div>
+    </div>
+    <div class="q-container" data-ans="부당이득">
+        <div class="q-text"><span class="q-num">[30]</span> 의사능력이 없어 근저당권 계약이 무효가 되더라도, 채무자가 이미 받은 대출금은 원인 없이 받은 것이므로 ( <input type="text"> )으로서 반환해야 한다.</div>
+        <div class="res-box"></div><div class="exp">해설: 18강. 담보는 풀려도 빌린 돈은 갚아야 합니다.</div>
+    </div>
+    <div class="q-container" data-ans="750">
+        <div class="q-text"><span class="q-num">[31]</span> 책임능력 '있는' 미성년자가 사고를 냈을 때, 부모의 감독의무 위반과 사고 사이에 상당인과관계가 있으면 부모는 민법 제( <input type="text"> )조에 기하여 불법행위책임을 진다. (숫자만)</div>
+        <div class="res-box"></div><div class="exp">해설: 18강 킬러. 능력이 있으면 일반불법행위(750조), 능력이 없으면 감독자책임(755조)입니다.</div>
+    </div>
+
+    <div class="btn-zone">
+        <button onclick="gradeFinalExam()">최종 병기 50제 채점하기</button>
+        <div class="score-board" id="scoreBoard"></div>
+    </div>
+
+</div>
+
+<script>
+    function gradeFinalExam() {
+        const questions = document.querySelectorAll('.q-container');
+        let score = 0;
+        let answered = 0;
+
+        questions.forEach(q => {
+            const inputField = q.querySelector('input');
+            const uInput = inputField.value.trim().replace(/\s/g, "");
+            const cAns = q.getAttribute('data-ans').replace(/\s/g, "");
+            const resBox = q.querySelector('.res-box');
+            const expBox = q.querySelector('.exp');
+            
+            if(uInput !== "") answered++;
+
+            resBox.style.display = 'block';
+            expBox.style.display = 'block';
+
+            // 정답 처리 (융통성 100% 반영)
+            if (uInput === cAns || (cAns === "안날" && uInput === "안날로부터") || (cAns === "사실심변론종결시" && uInput.includes("변론종결")) || (cAns === "적용되지않는다" && uInput.includes("적용"))) {
+                resBox.innerHTML = "✅ 정답입니다! [핵심 키워드 통과]";
+                resBox.className = "res-box correct";
+                inputField.style.color = "#155724";
+                score++;
+            } else {
+                resBox.innerHTML = `❌ 오답. [교수님 채점 모범답안: ${q.getAttribute('data-ans')}]`;
+                resBox.className = "res-box wrong";
+                inputField.style.color = "#c0392b";
+                inputField.style.textDecoration = "line-through";
+            }
+        });
+
+        const scoreBoard = document.getElementById('scoreBoard');
+        scoreBoard.style.display = 'block';
+        
+        // 31문제 (계산문제 포함)
+        const totalQuestions = questions.length;
+        scoreBoard.innerHTML = `최종 득점: ${score} / ${totalQuestions} 문제 정답`;
+
+        let msg = "";
+        if (score === totalQuestions) {
+            msg = "🏆 [경축] 완벽한 만점입니다!! 계산문제부터 가장 악랄한 판례의 함정까지 모두 돌파하셨습니다. 이번 기말고사 A+ 수석은 의심의 여지가 없습니다!!";
+        } else if (score >= totalQuestions - 4) {
+            msg = "🔥 훌륭합니다! 거의 완벽에 가깝습니다. 틀린 판례의 키워드만 해설을 통해 다시 한번 눈에 바르시고 시험장에 입장하십시오!";
+        } else {
+            msg = "📚 전 범위에 걸친 킬러 문제들이다 보니 함정에 조금 빠지셨네요. 오답 해설을 꼼꼼히 읽으시면서 교수님의 출제 포인트를 다시 점검하세요!";
+        }
+        
+        if (answered < totalQuestions) {
+            msg = `[경고] 작성하지 않은 빈칸이 ${totalQuestions - answered}개 있습니다. 실제 시험에선 백지는 곧 0점입니다!\n\n` + msg;
+        }
+
+        alert(msg);
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    }
+</script>
+
+</body>
+</html>
